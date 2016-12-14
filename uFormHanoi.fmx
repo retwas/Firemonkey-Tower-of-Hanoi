@@ -1,0 +1,202 @@
+object FormHanoi: TFormHanoi
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 640
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnStart: TButton
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Commencer'
+      OnClick = btnStartClick
+    end
+    object lbMove: TLabel
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 95.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 154.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Mouvements'
+    end
+  end
+  object Viewport3D: TViewport3D
+    Align = Client
+    Color = claLightgray
+    Size.Width = 640.000000000000000000
+    Size.Height = 440.000000000000000000
+    Size.PlatformDefault = False
+    object LightTopLeft: TLight
+      Color = claWhite
+      LightType = Directional
+      SpotCutOff = 180.000000000000000000
+      Position.X = -9.705785751342773000
+      Position.Y = -5.612755775451660000
+      RotationAngle.X = 314.409881591796900000
+      RotationAngle.Y = 350.774353027343800000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      Quanternion = 
+        '(0.29865899682045,-0.388930588960648,-0.243786364793777,-0.83672' +
+        '1003055573)'
+    end
+    object Dummy: TDummy
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      object cPiece1: TCylinder
+        Position.X = -5.000000000000000000
+        Width = 4.000000000000000000
+        Height = 0.500000000000000000
+        Depth = 4.000000000000000000
+        OnMouseDown = cPiece1MouseDown
+        OnMouseMove = cPiece1MouseMove
+        OnMouseUp = cPiece1MouseUp
+        MaterialSource = lmsBlue
+      end
+      object cPiece2: TCylinder
+        Position.X = -5.000000000000000000
+        Position.Y = -0.500000000000000000
+        Width = 3.250000000000000000
+        Height = 0.500000000000000000
+        Depth = 3.250000000000000000
+        OnMouseDown = cPiece1MouseDown
+        OnMouseMove = cPiece1MouseMove
+        OnMouseUp = cPiece1MouseUp
+        MaterialSource = lmsCrimson
+      end
+      object cPiece3: TCylinder
+        Position.X = -5.000000000000000000
+        Position.Y = -1.000000000000000000
+        Width = 2.500000000000000000
+        Height = 0.500000000000000000
+        Depth = 2.500000000000000000
+        OnMouseDown = cPiece1MouseDown
+        OnMouseMove = cPiece1MouseMove
+        OnMouseUp = cPiece1MouseUp
+        MaterialSource = lmsTurquoise
+      end
+      object cPiece4: TCylinder
+        Position.X = -5.000000000000000000
+        Position.Y = -1.500000000000000000
+        Width = 1.750000000000000000
+        Height = 0.500000000000000000
+        Depth = 1.750000000000000000
+        OnMouseDown = cPiece1MouseDown
+        OnMouseMove = cPiece1MouseMove
+        OnMouseUp = cPiece1MouseUp
+        MaterialSource = lmsYellow
+      end
+    end
+    object rcBase: TRoundCube
+      Position.Y = 0.500000000000000000
+      Locked = True
+      Width = 15.000000000000000000
+      Height = 0.500000000000000000
+      Depth = 5.000000000000000000
+      HitTest = False
+      MaterialSource = lmsSaddlebrown
+      object cGauche: TCylinder
+        Position.X = -5.000000000000000000
+        Position.Y = -1.500000000000000000
+        Locked = True
+        Width = 0.250000000000000000
+        Height = 3.000000000000000000
+        Depth = 0.250000000000000000
+        HitTest = False
+        MaterialSource = lmsSaddlebrown
+      end
+      object cMilieu: TCylinder
+        Position.Y = -1.500000000000000000
+        Locked = True
+        Width = 0.250000000000000000
+        Height = 3.000000000000000000
+        Depth = 0.250000000000000000
+        HitTest = False
+        MaterialSource = lmsSaddlebrown
+      end
+      object cDroit: TCylinder
+        Position.X = 5.000000000000000000
+        Position.Y = -1.500000000000000000
+        Locked = True
+        Width = 0.250000000000000000
+        Height = 3.000000000000000000
+        Depth = 0.250000000000000000
+        HitTest = False
+        MaterialSource = lmsSaddlebrown
+      end
+    end
+  end
+  object lmsSaddlebrown: TLightMaterialSource
+    Diffuse = claSaddlebrown
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 48
+    Top = 408
+  end
+  object lmsBlue: TLightMaterialSource
+    Diffuse = claBlue
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 328
+    Top = 408
+  end
+  object lmsCrimson: TLightMaterialSource
+    Diffuse = claCrimson
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 408
+    Top = 408
+  end
+  object lmsTurquoise: TLightMaterialSource
+    Diffuse = claTurquoise
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 504
+    Top = 408
+  end
+  object lmsYellow: TLightMaterialSource
+    Diffuse = claYellow
+    Ambient = xFF202020
+    Emissive = claNull
+    Specular = xFF606060
+    Shininess = 30
+    Left = 584
+    Top = 408
+  end
+end
