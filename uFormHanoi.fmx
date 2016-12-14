@@ -79,6 +79,7 @@ object FormHanoi: TFormHanoi
         OnMouseDown = cPiece1MouseDown
         OnMouseMove = cPiece1MouseMove
         OnMouseUp = cPiece1MouseUp
+        SubdivisionsAxes = 24
         MaterialSource = lmsBlue
       end
       object cPiece2: TCylinder
@@ -90,6 +91,7 @@ object FormHanoi: TFormHanoi
         OnMouseDown = cPiece1MouseDown
         OnMouseMove = cPiece1MouseMove
         OnMouseUp = cPiece1MouseUp
+        SubdivisionsAxes = 24
         MaterialSource = lmsCrimson
       end
       object cPiece3: TCylinder
@@ -101,6 +103,7 @@ object FormHanoi: TFormHanoi
         OnMouseDown = cPiece1MouseDown
         OnMouseMove = cPiece1MouseMove
         OnMouseUp = cPiece1MouseUp
+        SubdivisionsAxes = 24
         MaterialSource = lmsTurquoise
       end
       object cPiece4: TCylinder
@@ -112,6 +115,7 @@ object FormHanoi: TFormHanoi
         OnMouseDown = cPiece1MouseDown
         OnMouseMove = cPiece1MouseMove
         OnMouseUp = cPiece1MouseUp
+        SubdivisionsAxes = 24
         MaterialSource = lmsYellow
       end
     end
